@@ -1,4 +1,4 @@
-import React from 'react';
+import { StatusBar } from 'react-native';
 import { ThemeProvider } from 'styled-components/native';
 import { NavigationContainer } from '@react-navigation/native';
 import {
@@ -27,6 +27,7 @@ export default function App() {
       <NavigationContainer>
         <ThemeProvider theme={theme}>
           <Loading />
+          <StatusBar barStyle='light-content' backgroundColor='transparent' translucent />
         </ThemeProvider>
       </NavigationContainer>
     );
@@ -37,6 +38,7 @@ export default function App() {
     <NavigationContainer>
       <ThemeProvider theme={theme}>
         <AuthNavigator />
+        <StatusBar barStyle='light-content' backgroundColor='transparent' translucent />
       </ThemeProvider>
     </NavigationContainer>
   );
